@@ -1,0 +1,252 @@
+You are refining this repository in a way that preserves its strongest current qualities:
+
+- discipline
+- restraint
+- concise governance language
+- tighter scope control
+- strong self-governance posture
+- more concrete active-work framing
+
+Keep those strengths intact while aligning the repository more tightly to the target architecture and correcting structural inconsistencies. Increase completeness and operator usefulness where needed, but do not bloat the repository or weaken its controlled tone.
+
+You are the first pass on the same repository. Your job is to tighten, normalize, and harden the repository before the second pass enriches it.
+
+You are operating in the repository root of the current Control Plane Framework v2 Stable line.
+
+This repository is being refined on the `development` branch. Before making changes, verify that the current branch is `development`. If it is not, switch to `development` before proceeding. All commits from this run must stay on `development`.
+
+This is a targeted refinement pass. Do not rebuild from scratch.
+
+Your job is to align this repository more tightly with the intended v2 vision and improve it in-place.
+
+## Fixed v2 vision
+
+This repository is a repository-native control framework for AI-assisted software development.
+
+It must:
+- preserve framework integrity
+- preserve one controlled project
+- preserve the project vision
+- preserve decomposition into features, task groups, and tasks
+- preserve priorities
+- preserve the current active work state
+- guide one chosen tool at a time through a clean handoff
+- keep repository truth stable so different tools can work against the same controlled state
+
+It controls repository truth and execution alignment.
+It does not need to control AI internals.
+
+## Required architecture
+
+The repository must reflect this exact project structure:
+
+project/
+├── app/
+│   └── README.md
+├── docs/
+│   ├── features/
+│   │   └── README.md
+│   ├── task_groups/
+│   │   └── README.md
+│   ├── tasks/
+│   │   └── README.md
+│   ├── priorities/
+│   │   ├── now.md
+│   │   ├── next.md
+│   │   ├── later.md
+│   │   ├── blocked.md
+│   │   └── done.md
+│   ├── roadmap.md
+│   ├── decisions.md
+│   ├── definition_of_done.md
+│   └── execution_control.md
+├── evidence/
+│   ├── run_logs/
+│   │   └── .gitkeep
+│   ├── test_runs/
+│   │   └── .gitkeep
+│   └── artifacts/
+│       └── .gitkeep
+├── now/
+│   ├── description.md
+│   ├── prompt.md
+│   └── metadata.json
+└── vision/
+    ├── core_vision.md
+    ├── constraints.md
+    └── brainstorming.md
+
+## Core control model
+
+### Layer 1 — Framework self-governance
+Protects:
+- framework doctrine
+- routing rules
+- protected paths
+- planning synchronization
+- execution boundaries
+
+### Layer 2 — Single-project control
+Under:
+- `project/`
+
+Protects and governs:
+- `project/vision/`
+- `project/docs/features/`
+- `project/docs/task_groups/`
+- `project/docs/tasks/`
+- `project/docs/priorities/`
+- `project/now/`
+- `project/evidence/`
+
+### Layer 3 — Execution guidance
+Guides external tools by:
+- telling them what to read
+- telling them what they may change
+- telling them what they must not change
+- using `project/now/prompt.md` as the handoff source
+
+## Immediate objective for this run
+
+Improve the current stable hybrid repository in-place so it becomes more complete, more internally consistent, and more aligned to the intended v2 vision without widening scope.
+
+This run is focused on:
+- tightening structure
+- improving control docs
+- improving templates
+- improving seeded project-control artifacts
+- improving active-work fidelity
+- preserving exact repository visibility in the root README
+
+## Required corrections and improvements
+
+### 1. Keep paths canonical
+There must be only:
+- `project/docs/priorities/`
+- `project/evidence/`
+
+There must be no duplicate priorities or evidence surfaces anywhere else.
+
+### 2. Preserve the stable governance spine
+Do not weaken:
+- the boring one-tool-at-a-time posture
+- the repository-truth control posture
+- the full recursive README compliance rule
+- the protected/restricted/allowed path model
+- the one-project-per-repo model
+
+### 3. Improve the seeded project-control artifacts
+Review and strengthen as needed:
+- `project/docs/features/FEAT-001-repository-truth-control.md`
+- `project/docs/task_groups/TG-001-structural-compliance-and-active-work-control.md`
+- `project/docs/tasks/TASK-001-normalize-v2-structure-and-control-locations.md`
+
+Improve them only if the improvement is real and aligned to the v2 vision.
+
+### 4. Improve templates
+Refine:
+- `framework/templates/feature-template.md`
+- `framework/templates/task-group-template.md`
+- `framework/templates/task-template.md`
+- `framework/templates/active-work-template.md`
+
+The templates must stay controlled and operational, but they should be strong enough to support real use.
+
+### 5. Improve active-work fidelity
+Refine:
+- `project/now/description.md`
+- `project/now/prompt.md`
+- `project/now/metadata.json`
+
+They must form a real active-work package, not generic filler.
+
+### 6. Improve guidance docs
+Refine only if it genuinely improves the repo:
+- `README.md`
+- `docs/overview.md`
+- `docs/start-here.md`
+- `docs/routing.md`
+- `docs/control-model.md`
+- `project/docs/execution_control.md`
+- `project/docs/definition_of_done.md`
+
+Keep them concise, disciplined, and operational.
+
+### 7. Preserve exact repository visibility
+This is mandatory.
+
+The root `README.md` must contain a fully accurate, fully recursive file tree of the repository.
+
+That tree must:
+- include every tracked file
+- include every tracked subdirectory
+- recurse fully through the repo
+- match the actual repository exactly
+
+If a file is added, removed, renamed, or moved, the root README tree must be updated accordingly in the same change set.
+
+### 8. Preserve real path integrity
+This is unconditional.
+
+- every path referenced in any doc must be real
+- every file named in the README tree must exist
+- every tracked file in the repo must appear in the README tree
+- the README tree must always be a true mirror of the repository structure
+
+If this is not true, the framework is out of compliance.
+
+### 9. Stay within scope
+Do not add:
+- UI
+- dashboard code
+- APIs
+- CI
+- scripts
+- runtime code
+- multi-model orchestration inside the framework
+- monetization concepts
+- anything unrelated to strengthening the stable v2 control framework
+
+## Git requirements
+
+This run is happening on the `development` branch.
+
+Before making changes:
+1. verify current branch is `development`
+2. if not, switch to `development`
+
+After changes:
+1. stage the modified files
+2. commit the changes to `development`
+
+Use this exact commit message format for this pass:
+
+For the first pass:
+`stable development refinement pass 1`
+
+For the second pass:
+`stable development refinement pass 2`
+
+If this pass is clearly the first model run in the current sequence, use pass 1.
+If this pass is clearly the second model run in the current sequence, use pass 2.
+
+## Review requirements
+
+Before committing:
+1. inspect the actual full file tree
+2. ensure docs match the real structure
+3. ensure all path references are correct
+4. ensure only one priorities location exists
+5. ensure only one evidence surface exists
+6. ensure `project/now/` is an actual active-work layer
+7. ensure the root `README.md` contains a fully recursive and exact file tree
+8. ensure every referenced path is real
+9. ensure the repository remains aligned to the boring, one-tool-at-a-time v2 vision
+
+## Final output
+
+Return only:
+- files modified
+- files created
+- summary of structural and content improvements
+- confirmation that changes were committed to `development`
