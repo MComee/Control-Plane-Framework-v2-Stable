@@ -1,15 +1,15 @@
 You are refining this repository in a way that preserves its strongest current qualities:
 
-- discipline
-- restraint
-- concise governance language
-- tighter scope control
-- strong self-governance posture
-- more concrete active-work framing
+- clarity
+- readability
+- stronger operator guidance
+- richer templates
+- more explicit routing
+- more detailed metadata
 
-Keep those strengths intact while aligning the repository more tightly to the target architecture and correcting structural inconsistencies. Increase completeness and operator usefulness where needed, but do not bloat the repository or weaken its controlled tone.
+Keep those strengths intact while aligning the repository more tightly to the target architecture and correcting structural inconsistencies. Tighten structure and discipline where needed, but do not flatten the repository into sterile minimalism.
 
-You are the first pass on the same repository. Your job is to tighten, normalize, and harden the repository before the second pass enriches it.
+You are the second pass on the same repository. Your job is to enrich and round out what is already there without widening scope, breaking structure, or undoing the governance spine.
 
 You are operating in the repository root of the current Control Plane Framework v2 Stable line.
 
