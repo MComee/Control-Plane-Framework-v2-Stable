@@ -1,0 +1,32 @@
+{
+  "project_name": "Control Plane Framework v2 Stable",
+  "lane": "now",
+  "status": "ready",
+  "task_id": "TASK-001",
+  "allowed_paths": [
+    "README.md",
+    "docs/*",
+    "framework/templates/*",
+    "project/docs/*",
+    "project/now/*",
+    "project/evidence/*"
+  ],
+  "forbidden_paths": [
+    "framework/rules/*",
+    "project/vision/*",
+    "project/app/*"
+  ],
+  "validation_requirements": [
+    "required architecture paths exist",
+    "only one priorities location exists at project/docs/priorities",
+    "only one evidence surface exists at project/evidence",
+    "README includes a fully recursive exact tracked file tree",
+    "all doc path references resolve to real paths",
+    "forbidden paths remained unchanged"
+  ],
+  "evidence_paths": [
+    "project/evidence/run_logs/",
+    "project/evidence/test_runs/",
+    "project/evidence/artifacts/"
+  ]
+}
