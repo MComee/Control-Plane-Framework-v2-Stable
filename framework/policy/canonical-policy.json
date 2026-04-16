@@ -1,0 +1,80 @@
+{
+  "policy_version": "1.0.0",
+  "policy_name": "cpf-v2-stable-canonical-policy",
+  "precedence_order": [
+    "framework/policy/canonical-policy.json",
+    "framework rules and doctrine docs",
+    "project/now/metadata.json",
+    "runner routing packet",
+    "tool/model behavior"
+  ],
+  "default_execution_mode": "standard_execution",
+  "stable_truth_surfaces": [
+    "README.md",
+    "docs/*",
+    "framework/*",
+    "project/vision/*",
+    "project/docs/*",
+    "project/now/*",
+    "project/evidence/*",
+    "project/run_context/*"
+  ],
+  "execution_modes": {
+    "standard_execution": {
+      "description": "Default bounded build mode for normal implementation work.",
+      "allowed_paths": [
+        "project/app/*",
+        "project/evidence/*",
+        "project/run_context/*"
+      ],
+      "forbidden_paths": [
+        "README.md",
+        "docs/*",
+        "framework/rules/*",
+        "framework/policy/*",
+        "project/vision/*",
+        "project/docs/*",
+        "project/now/*"
+      ]
+    },
+    "planning_authorized": {
+      "description": "Planning and framework-authorized mutation mode for doctrine, templates, active work, and evidence alignment.",
+      "allowed_paths": [
+        "README.md",
+        "docs/*",
+        "framework/templates/*",
+        "project/docs/*",
+        "project/now/*",
+        "project/evidence/*",
+        "project/run_context/*"
+      ],
+      "forbidden_paths": [
+        "framework/rules/*",
+        "framework/policy/*",
+        "project/vision/*",
+        "project/app/*"
+      ]
+    }
+  },
+  "run_context_node_invariants": [
+    "node_id",
+    "parent_id",
+    "root_id",
+    "objective",
+    "rationale",
+    "inherited_constraints",
+    "dependencies",
+    "local_success_criteria",
+    "allowed_writable_surfaces",
+    "status"
+  ],
+  "audit_artifacts": [
+    "project/evidence/run_logs/",
+    "project/evidence/test_runs/",
+    "project/evidence/artifacts/",
+    "project/run_context/audit/last_run_prompt.md",
+    "project/run_context/audit/last_run_summary.md",
+    "project/run_context/audit/last_tree_snapshot.md"
+  ],
+  "readme_tree_rule": "The root README must remain a fully recursive, exact mirror of every repository file and directory path."
+}
