@@ -55,6 +55,18 @@ No executable leaf node may exist without:
 - local success criteria
 - allowed writable surfaces
 
+## Canonical Policy Rule
+`framework/policy/canonical-policy.json` is the machine-readable policy source of truth.
+
+Precedence order is:
+1. `framework/policy/canonical-policy.json`
+2. framework rules and doctrine docs
+3. `project/now/metadata.json`
+4. runner routing packet
+5. tool/model behavior
+
+Any lower-precedence surface that conflicts with the canonical policy is non-authoritative and must be brought back into alignment.
+
 ## Control Assertions
 - This framework controls repository truth and execution alignment, not AI internals.
 - One repository instance controls one project.
@@ -63,3 +75,4 @@ No executable leaf node may exist without:
 - Validation must confirm protected boundaries were respected.
 - Root `README.md` must remain a fully recursive, exact mirror of all repository paths.
 - Recursive run-context decomposition must preserve logical ancestry from root objective to executable leaf.
+- Active metadata must conform to the canonical policy contract.
