@@ -76,12 +76,15 @@ At the start of a model's next pass on the same branch, the active run-context w
 │   │   ├── execution-boundaries.md
 │   │   ├── planning-sync.md
 │   │   └── protected-files.md
-│   └── templates/
-│       ├── active-work-template.md
-│       ├── feature-template.md
-│       ├── run-context-node-template.md
-│       ├── task-group-template.md
-│       └── task-template.md
+│   ├── templates/
+│   │   ├── active-work-template.md
+│   │   ├── feature-template.md
+│   │   ├── run-context-node-template.md
+│   │   ├── task-group-template.md
+│   │   └── task-template.md
+│   └── validators/
+│       ├── README.md
+│       └── validate_policy.py
 └── project/
     ├── app/
     │   └── README.md
