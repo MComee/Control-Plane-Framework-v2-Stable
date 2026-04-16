@@ -89,6 +89,7 @@ At the start of a model's next pass on the same branch, the active run-context w
     │   ├── execution_control.md
     │   ├── features/
     │   │   ├── FEAT-001-repository-truth-control.md
+    │   │   ├── FEAT-002-recursive-run-context-control.md
     │   │   └── README.md
     │   ├── priorities/
     │   │   ├── blocked.md
@@ -99,10 +100,15 @@ At the start of a model's next pass on the same branch, the active run-context w
     │   ├── roadmap.md
     │   ├── task_groups/
     │   │   ├── README.md
-    │   │   └── TG-001-structural-compliance-and-active-work-control.md
+    │   │   ├── TG-001-structural-compliance-and-active-work-control.md
+    │   │   └── TG-002-recursive-run-context-foundation.md
     │   └── tasks/
     │       ├── README.md
-    │       └── TASK-001-normalize-v2-structure-and-control-locations.md
+    │       ├── TASK-001-normalize-v2-structure-and-control-locations.md
+    │       ├── TASK-002-define-run-context-node-invariants.md
+    │       ├── TASK-003-define-run-context-regeneration-rules.md
+    │       ├── TASK-004-define-run-context-audit-retention-rules.md
+    │       └── TASK-005-define-executable-leaf-contract.md
     ├── evidence/
     │   ├── artifacts/
     │   │   └── .gitkeep
