@@ -67,6 +67,27 @@ Precedence order is:
 
 Any lower-precedence surface that conflicts with the canonical policy is non-authoritative and must be brought back into alignment.
 
+## Human Review Boundary Rule
+This framework is human-supervised by design.
+
+Human review must remain at these judgment gates:
+- prompt approval before execution
+- keep / reject / defer decisions across branch outputs
+- convergence approval before selected results are applied
+- promotion approval before accepted results move into a stable branch
+- policy override decisions
+- doctrine or vision changes that alter framework or project intent
+
+Automation is acceptable for bounded support work such as:
+- local execution inside approved path boundaries
+- validation support
+- artifact capture
+- recursive run-context generation and refresh
+- branch hygiene
+- changed-file and diff summaries
+- staging only approved writable surfaces
+- applying already-approved convergence decisions
+
 ## Control Assertions
 - This framework controls repository truth and execution alignment, not AI internals.
 - One repository instance controls one project.
@@ -76,3 +97,4 @@ Any lower-precedence surface that conflicts with the canonical policy is non-aut
 - Root `README.md` must remain a fully recursive, exact mirror of all repository paths.
 - Recursive run-context decomposition must preserve logical ancestry from root objective to executable leaf.
 - Active metadata must conform to the canonical policy contract.
+- Human judgment must remain at convergence and promotion gates.
