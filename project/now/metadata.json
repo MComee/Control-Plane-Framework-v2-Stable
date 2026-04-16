@@ -3,30 +3,37 @@
   "lane": "now",
   "status": "ready",
   "task_id": "TASK-001",
+  "policy_source": "framework/policy/canonical-policy.json",
+  "policy_version": "1.0.0",
+  "execution_mode": "planning_authorized",
   "allowed_paths": [
     "README.md",
     "docs/*",
     "framework/templates/*",
     "project/docs/*",
     "project/now/*",
-    "project/evidence/*"
+    "project/evidence/*",
+    "project/run_context/*"
   ],
   "forbidden_paths": [
     "framework/rules/*",
+    "framework/policy/*",
     "project/vision/*",
     "project/app/*"
   ],
   "validation_requirements": [
+    "active metadata conforms to framework/policy/canonical-policy.json",
     "required architecture paths exist",
     "only one priorities location exists at project/docs/priorities",
     "only one evidence surface exists at project/evidence",
-    "README includes a fully recursive exact tracked file tree",
+    "README includes a fully recursive exact repository tree",
     "all doc path references resolve to real paths",
     "forbidden paths remained unchanged"
   ],
   "evidence_paths": [
     "project/evidence/run_logs/",
     "project/evidence/test_runs/",
-    "project/evidence/artifacts/"
+    "project/evidence/artifacts/",
+    "project/run_context/audit/"
   ]
 }
