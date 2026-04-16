@@ -24,6 +24,26 @@ Guides one chosen tool at a time by defining:
 
 `project/now/prompt.md` is the execution handoff source.
 
+## Human Review Boundary Rule
+This framework is human-supervised by design.
+
+Human review must remain at these judgment gates:
+- prompt approval before execution
+- keep / reject / defer decisions across branch outputs
+- convergence approval before selected results are applied
+- promotion approval before accepted results move into a stable branch
+- policy override decisions
+- doctrine or vision changes that alter framework or project intent
+
+Automation is acceptable for bounded support work such as:
+- local execution inside approved path boundaries
+- validation support
+- artifact capture
+- branch hygiene
+- changed-file and diff summaries
+- staging only approved writable surfaces
+- applying already-approved convergence decisions
+
 ## Control Assertions
 - This framework controls repository truth and execution alignment, not AI internals.
 - One repository instance controls one project.
@@ -31,3 +51,4 @@ Guides one chosen tool at a time by defining:
 - Execution must consume `project/now/`.
 - Validation must confirm protected boundaries were respected.
 - Root `README.md` must remain a fully recursive, exact mirror of tracked repository paths.
+- Human judgment must remain at convergence and promotion gates.
