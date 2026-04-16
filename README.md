@@ -10,6 +10,7 @@ Repository-native control framework for AI-assisted software development.
 - Validate that protected and forbidden boundaries were respected.
 - Preserve a complete recursive repository map in this root `README.md`.
 - Add a recursive run-context layer that helps constrained local models execute bounded work without losing parent intent.
+- Preserve human approval at convergence, promotion, and other judgment gates.
 
 ## Scope Statement
 This framework governs repository truth, planning state, task decomposition, active work, and evidence.
@@ -59,12 +60,34 @@ Decomposition must proceed through logical levels so that every executable leaf 
 
 At the start of a model's next pass on the same branch, the active run-context working set may be regenerated. Prior run-context snapshots must remain auditable under `project/run_context/audit/`.
 
+## Human Review Rule
+This framework is human-supervised by design.
+
+The operator must remain in the loop for:
+- prompt approval before execution
+- keep / reject / defer decisions across branch outputs
+- convergence approval before selected results are applied
+- promotion approval before accepted results move into a stable branch
+- policy override decisions
+- doctrine or vision changes that alter framework or project intent
+
+Automation is acceptable for bounded support work such as:
+- branch checkout and branch hygiene
+- bounded generation within approved writable surfaces
+- validation support
+- artifact capture
+- recursive run-context generation and refresh
+- changed-file and diff summaries
+- staging only approved writable surfaces
+- applying already-approved convergence decisions
+
 ## Repository Tree (All Paths)
 ```text
 .
 ├── README.md
 ├── docs/
 │   ├── control-model.md
+│   ├── human-review-model.md
 │   ├── overview.md
 │   ├── routing.md
 │   ├── run-context.md
