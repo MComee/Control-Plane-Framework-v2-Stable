@@ -70,6 +70,8 @@ At the start of a model's next pass on the same branch, the active run-context w
 │   ├── run-context.md
 │   └── start-here.md
 ├── framework/
+│   ├── policy/
+│   │   └── canonical-policy.json
 │   ├── rules/
 │   │   ├── execution-boundaries.md
 │   │   ├── planning-sync.md
