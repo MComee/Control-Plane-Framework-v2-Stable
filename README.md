@@ -28,11 +28,13 @@ Guides one chosen tool at a time through `project/now/`, with explicit allowed a
 ## Compliance Rule: Full Repository Visibility
 The root `README.md` is the universal inspection entrypoint.
 
-This file must always contain a fully recursive, exact tree of all tracked files and tracked subdirectories in this repository.
+This file must always contain a fully recursive, exact tree of every file and every directory in this repository.
 
-If any tracked path is added, removed, renamed, or moved, this tree must be updated in the same change set. Any mismatch is framework non-compliance.
+No repository paths are excluded from visibility compliance based on file type, stack, language, framework role, or subsystem role.
 
-## Repository Tree (Tracked Paths)
+If any path is added, removed, renamed, moved, or reclassified, this tree must be updated in the same change set. Any mismatch is framework non-compliance.
+
+## Repository Tree (All Paths)
 ```text
 .
 ├── README.md
