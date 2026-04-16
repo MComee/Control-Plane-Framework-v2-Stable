@@ -9,6 +9,7 @@ Repository-native control framework for AI-assisted software development.
 - Drive execution from `project/now/` with one-tool-at-a-time handoff.
 - Validate that protected and forbidden boundaries were respected.
 - Preserve a complete recursive repository map in this root `README.md`.
+- Preserve human approval at convergence, promotion, and other judgment gates.
 
 ## Scope Statement
 This framework governs repository truth, planning state, task decomposition, active work, and evidence.
@@ -32,12 +33,33 @@ This file must always contain a fully recursive, exact tree of all tracked files
 
 If any tracked path is added, removed, renamed, or moved, this tree must be updated in the same change set. Any mismatch is framework non-compliance.
 
+## Human Review Rule
+This framework is human-supervised by design.
+
+The operator must remain in the loop for:
+- prompt approval before execution
+- keep / reject / defer decisions across branch outputs
+- convergence approval before selected results are applied
+- promotion approval before accepted results move into a stable branch
+- policy override decisions
+- doctrine or vision changes that alter framework or project intent
+
+Automation is acceptable for bounded support work such as:
+- branch checkout and branch hygiene
+- bounded generation within approved writable surfaces
+- validation support
+- artifact capture
+- changed-file and diff summaries
+- staging only approved writable surfaces
+- applying already-approved convergence decisions
+
 ## Repository Tree (Tracked Paths)
 ```text
 .
 ├── README.md
 ├── docs/
 │   ├── control-model.md
+│   ├── human-review-model.md
 │   ├── overview.md
 │   ├── routing.md
 │   └── start-here.md
