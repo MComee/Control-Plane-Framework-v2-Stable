@@ -11,9 +11,10 @@ Repository-native control framework for AI-assisted software development.
 - Preserve a complete recursive repository map in this root `README.md`.
 - Add a recursive run-context layer that helps constrained local models execute bounded work without losing parent intent.
 - Preserve human approval at convergence, promotion, and other judgment gates.
+- Support a local reference layer so projects can carry authoritative stack or domain guidance under controlled repository structure.
 
 ## Scope Statement
-This framework governs repository truth, planning state, task decomposition, active work, and evidence.
+This framework governs repository truth, planning state, task decomposition, active work, evidence, and project-local reference structure.
 It does not govern AI internals.
 
 ## Core Model
@@ -22,7 +23,7 @@ It does not govern AI internals.
 Protects doctrine, routing, protected paths, planning synchronization, execution boundaries, and repository-visibility compliance.
 
 ### Layer 2 — Single-Project Control
-Governs one project under `project/`, including vision, decomposition, priorities, active work, and evidence.
+Governs one project under `project/`, including vision, decomposition, priorities, active work, evidence, and the local reference layer.
 
 ### Layer 3 — Execution Guidance
 Guides one chosen tool at a time through `project/now/`, with explicit allowed and forbidden scope.
@@ -42,12 +43,19 @@ Each execution node must preserve:
 
 No leaf task may exist without an ancestry chain back to the current run root.
 
+### Layer 5 — Local Reference Layer
+Provides authoritative local manuals, stack notes, API references, and domain guidance under `project/references/`.
+
+This layer exists to support local-first reasoning and more reliable implementation work when the project depends on external technical stacks or domain manuals.
+
+The reference layer is read-oriented by default and should be explicitly maintained rather than casually modified during ordinary rounds.
+
 ## Compliance Rule: Full Repository Visibility
 The root `README.md` is the universal inspection entrypoint.
 
 This file must always contain a fully recursive, exact tree of every file and every directory in this repository.
 
-No repository paths are excluded from visibility compliance based on file type, stack, language, framework role, or subsystem role.
+No repository paths are excluded from visibility compliance based on file type, stack, language, framework role, subsystem role, or reference role.
 
 If any path is added, removed, renamed, moved, or reclassified, this tree must be updated in the same change set. Any mismatch is framework non-compliance.
 
@@ -60,6 +68,16 @@ Decomposition must proceed through logical levels so that every executable leaf 
 
 At the start of a model's next pass on the same branch, the active run-context working set may be regenerated. Prior run-context snapshots must remain auditable under `project/run_context/audit/`.
 
+## Reference Layer Rule
+Projects that materially depend on languages, frameworks, libraries, APIs, platform tooling, or domain manuals should populate `project/references/` with curated local guidance.
+
+The minimum intended reference structure is:
+- `project/references/README.md`
+- `project/references/index.md`
+- `project/references/stack_profile.json`
+
+This structure is the canonical place for local stack and domain reference bundles.
+
 ## Human Review Rule
 This framework is human-supervised by design.
 
@@ -70,6 +88,7 @@ The operator must remain in the loop for:
 - promotion approval before accepted results move into a stable branch
 - policy override decisions
 - doctrine or vision changes that alter framework or project intent
+- inclusion and maintenance of major local reference bundles
 
 Automation is acceptable for bounded support work such as:
 - branch checkout and branch hygiene
@@ -89,6 +108,7 @@ Automation is acceptable for bounded support work such as:
 │   ├── control-model.md
 │   ├── human-review-model.md
 │   ├── overview.md
+│   ├── reference-model.md
 │   ├── routing.md
 │   ├── run-context.md
 │   └── start-here.md
@@ -148,6 +168,10 @@ Automation is acceptable for bounded support work such as:
     │   ├── description.md
     │   ├── metadata.json
     │   └── prompt.md
+    ├── references/
+    │   ├── README.md
+    │   ├── index.md
+    │   └── stack_profile.json
     ├── run_context/
     │   ├── README.md
     │   ├── active/
