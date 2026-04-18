@@ -75,6 +75,23 @@ Persistent human-guided alignment lane used to preserve high-fidelity project pl
 
 ---
 
+## Human verification rule
+
+The `chat` branch is not a silent auto-authority.
+
+Human verification remains mandatory when changes to `chat` materially affect:
+- core vision
+- constraints
+- project direction
+- priority ordering
+- accepted decomposition
+- convergence decisions
+- promotion of planning truth into accepted working or stable lines
+
+Automation and chat assistance may propose or structure these changes, but final acceptance remains a human-in-the-loop gate.
+
+---
+
 ## Mental model
 
 The `chat` branch is to project planning what pseudocode is to code.
@@ -89,10 +106,11 @@ It captures the truest structured intent first so future chat sessions and later
 2. read vision, constraints, roadmap, priorities, features, task groups, and tasks
 3. inspect implementation branches as needed
 4. update planning truth in `chat`
-5. generate better bounded prompts for implementation lanes
-6. review implementation results
-7. fold accepted planning updates back into `chat`
-8. converge accepted implementation results into `dev` or later stable branches
+5. verify human approval for material planning changes
+6. generate better bounded prompts for implementation lanes
+7. review implementation results
+8. fold accepted planning updates back into `chat`
+9. converge accepted implementation results into `dev` or later stable branches
 
 ---
 
@@ -111,5 +129,6 @@ It captures the truest structured intent first so future chat sessions and later
     (tasks)
     (next-step-intent))
   (reads whole-project-for-alignment)
+  (human-verification-required-at-material-planning-gates)
   (not primary-implementation-lane))
 ```
