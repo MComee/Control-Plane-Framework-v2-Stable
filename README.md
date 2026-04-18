@@ -12,9 +12,10 @@ Repository-native control framework for AI-assisted software development.
 - Add a recursive run-context layer that helps constrained local models execute bounded work without losing parent intent.
 - Preserve human approval at convergence, promotion, and other judgment gates.
 - Support a local reference layer so projects can carry authoritative stack or domain guidance under controlled repository structure.
+- Support a `chat` branch pattern so future projects can preserve high-fidelity human-guided planning state across chat sessions.
 
 ## Scope Statement
-This framework governs repository truth, planning state, task decomposition, active work, evidence, and project-local reference structure.
+This framework governs repository truth, planning state, task decomposition, active work, evidence, project-local reference structure, and future-project branch-role doctrine.
 It does not govern AI internals.
 
 ## Core Model
@@ -50,6 +51,26 @@ This layer exists to support local-first reasoning and more reliable implementat
 
 The reference layer is read-oriented by default and should be explicitly maintained rather than casually modified during ordinary rounds.
 
+### Layer 6 — Chat Alignment Branch Model
+A CPF-derived project may include a `chat` branch derived from `dev`.
+
+This branch is not a primary implementation lane.
+It is the persistent human-guided alignment branch.
+
+Its purpose is to preserve:
+- core vision
+- constraints
+- roadmap
+- priorities
+- feature decomposition
+- task-group decomposition
+- atomic tasks
+- recursive list-of-lists style planning where useful
+- next-step intent
+
+The `chat` branch should remain planning-heavy and implementation-light by default.
+It exists so future chat sessions can realign to the project without reconstructing everything from memory.
+
 ## Compliance Rule: Full Repository Visibility
 The root `README.md` is the universal inspection entrypoint.
 
@@ -78,6 +99,13 @@ The minimum intended reference structure is:
 
 This structure is the canonical place for local stack and domain reference bundles.
 
+## Chat Branch Rule
+When a project uses a `chat` branch, it should be created from `dev` and used as the persistent recursive planning branch.
+
+It should preserve the highest-fidelity human-guided project planning state and should not be treated as the main place for broad application buildout.
+
+Its mental model is: the `chat` branch is to project planning what pseudocode is to code.
+
 ## Human Review Rule
 This framework is human-supervised by design.
 
@@ -89,6 +117,7 @@ The operator must remain in the loop for:
 - policy override decisions
 - doctrine or vision changes that alter framework or project intent
 - inclusion and maintenance of major local reference bundles
+- major updates to `chat`-branch planning truth
 
 Automation is acceptable for bounded support work such as:
 - branch checkout and branch hygiene
@@ -105,6 +134,7 @@ Automation is acceptable for bounded support work such as:
 .
 ├── README.md
 ├── docs/
+│   ├── chat-branch-model.md
 │   ├── control-model.md
 │   ├── human-review-model.md
 │   ├── overview.md
