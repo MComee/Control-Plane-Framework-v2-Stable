@@ -2,6 +2,11 @@
 
 Repository-native control framework for AI-assisted software development.
 
+## Developer Documentation
+Start here for public developer-facing guidance:
+- `docs/developer-guide.md`
+- `docs/using-cpf-with-tools.md`
+
 ## Operating Intent
 - Govern repository truth and execution alignment.
 - Control one project per repository instance under `project/`.
@@ -136,12 +141,14 @@ Automation is acceptable for bounded support work such as:
 ├── docs/
 │   ├── chat-branch-model.md
 │   ├── control-model.md
+│   ├── developer-guide.md
 │   ├── human-review-model.md
 │   ├── overview.md
 │   ├── reference-model.md
 │   ├── routing.md
 │   ├── run-context.md
-│   └── start-here.md
+│   ├── start-here.md
+│   └── using-cpf-with-tools.md
 ├── framework/
 │   ├── policy/
 │   │   └── canonical-policy.json
