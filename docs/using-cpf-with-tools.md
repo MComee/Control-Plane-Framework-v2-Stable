@@ -48,6 +48,34 @@ Do not treat CPF as permission for uncontrolled whole-repository rewrites.
 
 ---
 
+## Recommended start pattern for one chosen build tool
+
+A practical diagnostic pattern is to choose one build tool or coding agent for the next round of work and maintain a rolling prompt horizon for that one tool.
+
+Recommended prompt set:
+- `current_prompt`
+- `draft_next_prompt`
+- `draft_next_plus_one_prompt`
+
+This does not mean all three prompts are automatically approved.
+It means the operator keeps one active prompt and two conditional draft prompts ready for review.
+
+### Why this helps
+- it preserves continuity between audited rounds
+- it helps reveal where prompt chains begin to fail
+- it makes it easier to see whether the problem is the tool, the prompt, or the repository state
+- it reduces the need to reconstruct the next step from scratch every round
+
+### After each round
+- audit the result
+- promote, revise, or discard `draft_next_prompt`
+- shift `draft_next_plus_one_prompt` forward when appropriate
+- create a new farthest draft
+
+The rolling prompt horizon is a diagnostic aid, not an automation bypass.
+
+---
+
 ## Using the `chat` branch
 
 If present, the `chat` branch should be treated as the persistent human-guided planning branch.
@@ -88,6 +116,7 @@ Human verification remains necessary for:
 - policy overrides
 - major changes to reference bundles
 - major `chat`-branch planning updates
+- promotion or replacement decisions for draft prompts in a rolling prompt horizon
 
 ---
 
