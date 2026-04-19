@@ -66,6 +66,62 @@ Use additional branches for bounded implementation or experimental work as neede
 
 ---
 
+## Recommended repository familiarization
+
+Before asking a chat tool or build tool to propose implementation prompts, it is usually best to align it to the full repository doctrine first.
+
+Recommended familiarization order:
+1. read the root `README.md`
+2. read `project/vision/`
+3. read `project/docs/roadmap.md`
+4. read `project/docs/priorities/`
+5. read relevant feature, task-group, and task files
+6. read `project/now/`
+7. read `project/references/` when the project depends on local manuals or stack references
+
+This improves continuity and reduces the risk that the chosen tool invents a parallel plan that conflicts with repository truth.
+
+---
+
+## Rolling prompt horizon for one chosen build tool
+
+When using one chosen build tool or coding agent, a useful diagnostic pattern is to maintain a rolling prompt horizon rather than only a single current prompt.
+
+Recommended structure:
+- `current_prompt`
+- `draft_next_prompt`
+- `draft_next_plus_one_prompt`
+
+This is not a commitment to execute future prompts unchanged.
+It is a planning and diagnostic aid.
+
+### Why it is useful
+- it preserves momentum between audited rounds
+- it reveals where prompt chains begin to drift
+- it helps distinguish tool weakness from prompt weakness
+- it makes prompt revision points easier to identify
+
+### Promotion rule
+After each audited round:
+- run and review `current_prompt`
+- either promote `draft_next_prompt`, revise it, or discard it
+- shift `draft_next_plus_one_prompt` forward when appropriate
+- regenerate a new farthest draft
+
+### Validity condition
+A draft prompt should only be promoted when the prior round remained acceptably aligned to:
+- repository truth
+- target stack and platform
+- directory-placement expectations
+- active-work boundaries
+- human review requirements
+
+### Human review rule
+Draft prompts do not replace human judgment.
+The operator should still decide whether the next prompt is close enough to promote, needs revision, or should be replaced by a corrective prompt.
+
+---
+
 ## Human verification rule
 
 CPF is human-supervised by design.
@@ -79,6 +135,7 @@ Human verification remains necessary for:
 - policy overrides
 - major updates to reference bundles
 - major `chat`-branch planning changes
+- promotion, revision, or discard decisions for draft prompts when using a rolling prompt horizon
 
 ---
 
@@ -103,5 +160,7 @@ The public framework does not require any one custom tool.
 - decompose into features, task groups, and tasks
 - define current active work
 - optionally create and maintain a `chat` branch
+- align the chosen tool to repository doctrine before prompting for implementation work
+- optionally maintain a rolling `current / next / next+1` prompt horizon for diagnostic use
 - execute bounded work on an appropriate branch
 - keep a human in the loop at the approval gates
